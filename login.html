@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <title>Student Applications</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">SMU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Apply</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Check Status</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="applications.html">Applications <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>Login to View Application Status</h1>
+        <div class="container" id="form-response-container"></div>
+        <form method="POST" onsubmit="handleLoginForm(event)">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Passcode</label>
+              <input type="password" class="form-control" id="passcode-input">
+              <small class="form-text text-muted">Enter the numeric code generated when applying</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        
+    </div>
+    <script src="./public/js/login.js"></script>
+</body>
+</html>
+
+<style>
+
+    table {
+        margin-top: 4rem;
+    }
+    table td{
+        text-align: center;
+    }
+    
+    table td button{
+        margin-top: .5rem;
+    }
+
+    .container{
+        width: 90%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container h1{
+        align-self: center;
+    }
+
+    textarea{
+        height: 3.5rem;
+    }
+
+    form{
+        padding: 2rem;
+    }
+
+    .btn-group{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .btn-group :nth-child(1){
+        
+        margin-right: 1rem;
+    }
+
+
+</style>
